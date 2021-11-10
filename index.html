@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To Do List</title>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+	<div id="container" align="center">
+		<h1>Lista de Afazeres</h1>
+        <div id="editAndButton">
+        	<input type="input" id="atividade" placeholder="Digite uma tarefa..." />
+        	<button id="addAtividade" onclick="addAtividade()">Adicionar</button>
+        </div>
+        <div class="item">
+        	<input type="checkbox" class="checkAtividade" name="check" unchecked />
+        	<span class="nomeAtividade">Teste</span>
+        	<button class="addAtividade" onclick="removeAtividade()">X</button>
+        </div>
+        <div class="item">
+        	<input type="checkbox" class="checkAtividade" name="check" unchecked />
+        	<span class="nomeAtividade">Teste</span>
+        	<button class="addAtividade" onclick="removeAtividade()">X</button>
+        </div>
+        <div class="item">
+        	<input type="checkbox" class="checkAtividade" name="check" unchecked />
+        	<span class="nomeAtividade">Teste</span>
+        	<button class="addAtividade" onclick="removeAtividade()">X</button>
+        </div>
+	</div>	
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

@@ -1,0 +1,40 @@
+body{
+	font-family: arial;
+}
+
+.checkAtividade{
+	float: left;
+	margin-left: 5%;
+	margin-top: 2.5%;
+}
+
+.nomeAtividade{
+	float: left;
+	margin-left: 1%;
+	margin-right: 55%;
+	margin-top: 2%;
+}
+
+.item{
+	margin-bottom: 8%;
+}
+
+#editAndButton{
+	margin-bottom: 10%;
+}
+
+#container{
+	width: 22%;
+	height: auto;
+	margin-left: 39%;
+	margin-right: 39%;
+}
+
+#atividade{
+	width: 200px;
+	padding: 5px;
+}
+
+#addAtividade{
+	padding: 5px;	
+}
