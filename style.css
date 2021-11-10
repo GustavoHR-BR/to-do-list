@@ -31,8 +31,9 @@ body{
 }
 
 #atividade{
-	width: 200px;
+	width: 55%;
 	padding: 5px;
+	margin-right: 5%;
 }
 
 #addAtividade{
