@@ -15,10 +15,12 @@ function criaAtividade() {
         divCheck.classList.add("divCheck");
         div.appendChild(divCheck);
         var checkBox = document.createElement("input");
+
         checkBox.id = i;
         checkBox.type = "checkbox";
         checkBox.name = "checkbox";
         divCheck.appendChild(checkBox);
+        localStorage.setItem("stateCheck" + i, "false");
 
         var divSpan = document.createElement("div");
         divSpan.classList.add("divSpan");
@@ -47,8 +49,10 @@ function criaAtividade() {
             var nomeAtividade = document.getElementById("span" + this.id);
             if (checkBox.checked) {
                 nomeAtividade.style.textDecoration = "line-through";
+                localStorage.setItem("stateCheck" + this.id, "true");
             } else {
                 nomeAtividade.style.textDecoration = "none";
+                localStorage.setItem("stateCheck" + this.id, "false");
             }
         };
 
@@ -74,7 +78,6 @@ function getAtividades() {
         var checkBox = document.createElement("input");
         checkBox.id = index;
         checkBox.type = "checkbox";
-        checkBox.name = "checkbox";
         divCheck.appendChild(checkBox);
 
         var divSpan = document.createElement("div");
@@ -101,8 +104,10 @@ function getAtividades() {
             var nomeAtividade = document.getElementById("span" + this.id);
             if (checkBox.checked) {
                 nomeAtividade.style.textDecoration = "line-through";
+                localStorage.setItem("stateCheck" + this.id, "true");
             } else {
                 nomeAtividade.style.textDecoration = "none";
+                localStorage.setItem("stateCheck" + this.id, "false");
             }
         };
 
