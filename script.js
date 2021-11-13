@@ -53,7 +53,6 @@ function criaAtividade() {
         };
 
         localStorage.setItem("qtdAtividades", i);
-        localStorage.setItem("indexExcluidos", JSON.stringify(indexExcluidos));
         document.getElementById("editAtividade").value = "";
     } else {
         alert("Por favor, preencha o nome da tarefa! ");
@@ -108,7 +107,6 @@ function getAtividades() {
         };
 
         document.getElementById("editAtividade").value = "";
-        localStorage.setItem("indexExcluidos", JSON.stringify(indexExcluidos));
     }
     i = qtdAtividades;
 }
