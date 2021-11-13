@@ -2,12 +2,6 @@ body{
 	font-family: arial;
 }
 
-#nomeAtividade{
-	width: 90%;
-	height: 90%;
-	float: left;
-}
-
 .divCheck{
 	padding-top: 1.5%;
 	width: 15%;

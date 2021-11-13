@@ -8,7 +8,7 @@ function criaAtividade() {
         var div = document.createElement("div");
         div.id = "atividade" + i;
         container.appendChild(div);
-        
+
         var divCheck = document.createElement("div");
         divCheck.classList.add('divCheck');
         div.appendChild(divCheck);
@@ -17,7 +17,6 @@ function criaAtividade() {
         checkBox.type = "checkbox";
         checkBox.name = "checkbox";
         divCheck.appendChild(checkBox);
-        
 
         var divSpan = document.createElement("div");
         divSpan.classList.add("divSpan");
@@ -29,28 +28,29 @@ function criaAtividade() {
         divSpan.appendChild(span);
         document.getElementById("span" + i).textContent = texto;
 
-        checkBox.onclick = function(){
-            document.getElementById("span"+this.id).innerText = 
-                document.getElementById("span"+this.id).innerText +
-                 "deuboa";
-        }
-        
-
         var divExcluir = document.createElement("div");
         divExcluir.classList.add("divExcluir");
         div.appendChild(divExcluir);
-
         var excluir = document.createElement("button");
         excluir.id = i;
+        excluir.style.font.bold;
         excluir.innerText = "X";
-        excluir.onclick = function()
-        {
-            document.getElementById("atividade"+this.id).remove();
+        excluir.onclick = function () {
+            document.getElementById("atividade" + this.id).remove();
         }
         divExcluir.appendChild(excluir);
 
+        checkBox.onclick = function () {
+            var nomeAtividade = document.getElementById("span" + this.id);
+            if (checkBox.checked) {
+                nomeAtividade.style.textDecoration = "line-through";
+            } else {
+                nomeAtividade.style.textDecoration = "none";
+            }
+        }
+
         document.getElementById("editAtividade").value = "";
-    }else{
+    } else {
         alert('Por favor, preencha o nome da tarefa! ');
     }
     document.getElementById("editAtividade").focus();
