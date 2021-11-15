@@ -1,4 +1,5 @@
 var i;
+var indexExcluidos = [];
 if ((i = null)) {
     i = 0;
 }
@@ -15,12 +16,10 @@ function criaAtividade() {
         divCheck.classList.add("divCheck");
         div.appendChild(divCheck);
         var checkBox = document.createElement("input");
-
         checkBox.id = i;
         checkBox.type = "checkbox";
         checkBox.name = "checkbox";
         divCheck.appendChild(checkBox);
-        localStorage.setItem("stateCheck" + i, 'false');
 
         var divSpan = document.createElement("div");
         divSpan.classList.add("divSpan");
@@ -30,8 +29,10 @@ function criaAtividade() {
         var texto = input.value;
         span.id = "span" + i;
         divSpan.appendChild(span);
-        document.getElementById("span" + i).textContent = texto;
-
+        var nomeAtividade = document.getElementById("span" + i);
+        nomeAtividade.textContent = texto;
+        nomeAtividade.style.textDecoration = "none";
+        localStorage.setItem("stateCheck" + i, "false");
         localStorage.setItem("nomeAtividade" + i, texto);
 
         var divExcluir = document.createElement("div");
@@ -42,6 +43,7 @@ function criaAtividade() {
         excluir.innerText = "X";
         excluir.onclick = function () {
             document.getElementById("atividade" + this.id).remove();
+            indexExcluidos.push(i);
         };
         divExcluir.appendChild(excluir);
 
