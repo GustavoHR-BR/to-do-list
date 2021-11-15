@@ -20,7 +20,7 @@ function criaAtividade() {
         checkBox.type = "checkbox";
         checkBox.name = "checkbox";
         divCheck.appendChild(checkBox);
-        localStorage.setItem("stateCheck" + i, "false");
+        localStorage.setItem("stateCheck" + i, 'false');
 
         var divSpan = document.createElement("div");
         divSpan.classList.add("divSpan");
@@ -88,6 +88,16 @@ function getAtividades() {
         divSpan.appendChild(span);
         document.getElementById("span" + index).textContent =
             localStorage.getItem("nomeAtividade" + index);
+
+        var stateOfThisCheck = localStorage.getItem("stateCheck" + index);
+        var nomeAtividade = document.getElementById("span" + index);
+        if (stateOfThisCheck == 'false') {
+            checkBox.checked = false;
+            nomeAtividade.style.textDecoration = "none";
+        } else {
+            checkBox.checked = true;
+            nomeAtividade.style.textDecoration = "line-through";
+        }
 
         var divExcluir = document.createElement("div");
         divExcluir.classList.add("divExcluir");
